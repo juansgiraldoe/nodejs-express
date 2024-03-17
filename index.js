@@ -7,10 +7,13 @@ const app = express();
 //Habilitar PUG.
 app.set('view engine', 'pug')
 
+//Definir la carpeta publica.
+app.use(express.static('public'))
+
 //Agregar router.
 app.use('/', router);
 
-//Definir puerto
+//Definir puerto.
 const port = process.env.PORT || 4500;
 
 app.listen( port, ()=> {
