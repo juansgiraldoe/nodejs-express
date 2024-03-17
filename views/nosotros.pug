@@ -1,2 +1,7 @@
-h1 Hola
-p Desde pug
+extends ./layout/index
+
+block contenido
+  //Pasar variables de Js.
+  p= viajes
+  p #{viajes}
+  p Nosotros
