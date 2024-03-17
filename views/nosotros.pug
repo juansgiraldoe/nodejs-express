@@ -8,4 +8,28 @@ block contenido
   
   main.container.mt-5
     .row
-      h1 #{pagina}
+      .col-md-5.d-flex
+        img(src="img/nosotros.jpg", alt="Imagen sobre nosotros.", srcset="", class="img-fluid")
+      .col-md-7
+        h1 #{pagina}
+        blockquote Quisque gravida aliquam odio at bibendum. Aliquam tempor dictum faucibus. Aliquam erat volutpat. Curabitur tellus nulla, accumsan ut tristique nec, accumsan nec est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed velit quis mauris ultrices fermentum. Praesent a nulla quis nibh finibus posuere id in risus.
+
+        p Sed metus erat, condimentum non risus vitae, pretium facilisis lacus. Aenean at eleifend felis. In ullamcorper rutrum imperdiet. Fusce in suscipit eros, id iaculis orci. Mauris non augue elit. Morbi eget tristique nibh, sed sodales lectus. Duis venenatis hendrerit augue, eget porta magna pulvinar in. Morbi blandit tortor id felis tincidunt, id condimentum magna suscipit.
+
+        p Vestibulum tempor odio interdum, cursus nulla ut, iaculis lorem. Vivamus in massa non mi imperdiet dictum sed id velit. Nam euismod efficitur dui. Praesent lectus nunc, consequat imperdiet sodales ut, feugiat eu massa. Nulla consectetur porttitor ligula a molestie. Nulla purus lorem, condimentum vitae fermentum eu, lobortis tempor justo. Etiam rutrum ante sit amet accumsan sagittis. Fusce feugiat lobortis tempor.
+  
+  .listado-iconos
+    .container.mt-5.py-5.text-center
+      .row
+        .col.md-3
+          img(src="icons/icono_seguridad.svg", alt="Icono seguridad", srcset="", class="img-fluid mb-4")
+          h2.mb-4 Seguridad
+          p Praesent lectus nunc, consequat imperdiet sodales ut, feugiat eu massa.
+        .col.md-3
+          img(src="icons/icono_destinos.svg", alt="Icono seguridad", srcset="", class="img-fluid mb-4")
+          h2.mb-4 Mejores destinos
+          p Praesent lectus nunc, consequat imperdiet sodales ut, feugiat eu massa.
+        .col.md-3
+          img(src="icons/icono_precios.svg", alt="Icono seguridad", srcset="", class="img-fluid mb-4")
+          h2.mb-4 Increibles precios
+          p Praesent lectus nunc, consequat imperdiet sodales ut, feugiat eu massa.
