@@ -1,9 +1,11 @@
 extends ./layout/index
 
 block contenido
-  //Pasar variables de Js.
-  p= viajes
-  p #{viajes}
-  p Nosotros
-
-  img(src="img/cupon.jpg", alt="", srcset="")
+  //- Pasar variables de Js.
+  //- p= viajes
+  //- p #{viajes}
+  //- p Nosotros
+  
+  main.container.mt-5
+    .row
+      h1 #{pagina}

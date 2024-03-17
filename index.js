@@ -5,10 +5,20 @@ import router from './routes/index.js';
 const app = express();
 
 //Habilitar PUG.
-app.set('view engine', 'pug')
+app.set('view engine', 'pug');
+
+app.use((req, res, next)=>{
+  //Obtener el año actual.
+  const year = new Date ();
+  res.locals.actualYear = year.getFullYear();
+  
+  res.locals.siteName = 'Travel Agency'
+  
+  next();
+})
 
 //Definir la carpeta publica.
-app.use(express.static('public'))
+app.use(express.static('public'));
 
 //Agregar router.
 app.use('/', router);
