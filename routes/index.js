@@ -1,35 +1,17 @@
 import express from 'express';
+import { paginaInicio, paginaNosotros, paginaViajes, paginaTestimonios } from '../controllers/paginasController.js';
 
 const router = express.Router();
 
 //request (req) es lo que enviamos (la peticion).
 //response (res) es la respuesta por parte de express.
-router.get('/', ( req, res ) => {
-  res.render('inicio', {
-    pagina: 'Inicio',
-  })
-});
 
-router.get('/nosotros', ( req, res ) => {
-  //Pasar variables a las vistas.
-  //const viajes = 'Viaje a alemania';
-  
-  
-  res.render('nosotros',{
-    pagina: 'Nosotros'
-  })
-});
+router.get('/', paginaInicio);
 
-router.get('/viajes', ( req, res ) => {
-  res.render('viajes', {
-    pagina: 'Viajes',
-  })
-});
+router.get('/nosotros', paginaNosotros);
 
-router.get('/testimonios', ( req, res ) => {
-  res.render('testimonios', {
-    pagina: 'Testimonios',
-  })
-});
+router.get('/viajes', paginaViajes);
+
+router.get('/testimonios', paginaTestimonios);
 
 export default router;
