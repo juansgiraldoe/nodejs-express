@@ -1,5 +1,7 @@
 import express from 'express';
 import { paginaInicio, paginaNosotros, paginaViajes, paginaTestimonios, paginaDestino } from '../controllers/paginasController.js';
+import { guardarTestimonios } from '../controllers/controllerTestimonios.js';
+
 
 const router = express.Router();
 
@@ -14,5 +16,6 @@ router.get('/viajes', paginaViajes);
 router.get('/viajes/:slug', paginaDestino);
 
 router.get('/testimonios', paginaTestimonios);
+router.post('/testimonios',guardarTestimonios);
 
 export default router;
