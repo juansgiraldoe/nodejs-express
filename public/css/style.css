@@ -30,7 +30,7 @@ h3 {
     border-color: #DC135F;
     padding: .8rem 0;
     text-transform: uppercase;
-    border-radius: .8rem;
+    border-radius: .5rem;
 }
 .btn-success:hover {
     background-color: rgb(184, 5, 73);
@@ -170,4 +170,8 @@ i {
     color: #DC135F;
     font-weight: bold;
     margin-top: 1rem;
+}
+
+svg{
+    margin-right: 8px;
 }

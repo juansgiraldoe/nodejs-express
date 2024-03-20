@@ -1,6 +1,7 @@
+//Configuracion de la base de datos.
 import Sequelize from "sequelize";
 
-const db = new Sequelize(' agenciaviajes', 'root', '7$M8Enst5IPB4!saKw@cT0Ducl&DOqHtDMYGfwk9', {
+const db = new Sequelize('agenciadeviajes', 'root', 'root', {
   host: '127.0.0.1',
   port: '3306',
   dialect: 'mysql',
