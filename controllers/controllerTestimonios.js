@@ -1,4 +1,7 @@
-const guardarTestimonios = (req, res) => {
+import { Testimonio } from "../models/Testimonios.js";
+
+
+const guardarTestimonios = async (req, res) => {
   //Validacion
   const {nombre, correo, mensaje} = req.body;
 
@@ -14,8 +17,31 @@ const guardarTestimonios = (req, res) => {
     errores.push({mensaje:`El mensaje no puede ir vacio.`});
   };
 
-  console.log(errores);
-
+  if( errores.length > 0 ){
+    //Mostrar errores en la vista.
+    res.render('testimonios', {
+      pagina: `Testimonios`,
+      errores,
+      nombre,
+      correo,
+      mensaje
+    });
+  } else {
+    //Alcmacenarlo en la base de datos.
+    try {
+      await Testimonio.create({
+        nombre,
+        correo,
+        mensaje
+      });
+    } catch (error) {
+      console.log(error);
+    };
+    res.render('testimonios', {
+      resultado: `exito`,
+      pagina: `Testimonios`
+    });
+  };
 };
 
 export {
