@@ -18,7 +18,7 @@ const paginaInicio =  async ( req, res ) => {
     });
     
   } catch (error) {
-    console.log(e);
+    console.log(error);
   };
 
 };
