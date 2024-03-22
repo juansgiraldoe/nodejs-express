@@ -18,13 +18,17 @@ const guardarTestimonios = async (req, res) => {
   };
 
   if( errores.length > 0 ){
+    //Consultar testimonios existentes.
+    const testimonios = await Testimonio.findAll();
+
     //Mostrar errores en la vista.
     res.render('testimonios', {
       pagina: `Testimonios`,
       errores,
       nombre,
       correo,
-      mensaje
+      mensaje,
+      testimonios
     });
   } else {
     //Alcmacenarlo en la base de datos.
@@ -37,10 +41,7 @@ const guardarTestimonios = async (req, res) => {
     } catch (error) {
       console.log(error);
     };
-    res.render('testimonios', {
-      resultado: `exito`,
-      pagina: `Testimonios`
-    });
+    res.redirect('/testimonios');
   };
 };
 

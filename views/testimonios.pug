@@ -2,6 +2,17 @@ extends ./layout/index
 
 block contenido
   h1(class="mt-5 text-center") #{pagina}
+  blockquote.text-center ¿Que dicen nuestros clientes?
+  .row.testimoniales
+    each testimonio in testimonios
+      .col-md-6.col-lg-4.mb-4
+        .card
+          .card-body
+            blockquote.blockquote
+            p.mb-0
+              | #{testimonio.mensaje}
+            footer.blockquote-footer
+              | #{testimonio.nombre}
   main.container.mt-5
     .row
       h2.d-block.w-100.text-center Agrega un testimonio.
@@ -11,10 +22,6 @@ block contenido
           if(errores)
             each error in errores
               .alert.col.alert-danger.text-center= error.mensaje
-          if (resultado === 'exito')
-            p.alert.col.alert-success.text-center !El testimonio se ha enviado correctamente!
-          else if (resultado === 'error')
-            p.mensaje.error Error! Ha ocurrido un error al enviar el testimonio.
           form(action="/testimonios", method="post")
             .form-group
               label(for="nombre") Nombre
