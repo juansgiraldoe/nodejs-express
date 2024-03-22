@@ -3,16 +3,9 @@ extends ./layout/index
 block contenido
   h1(class="mt-5 text-center") #{pagina}
   blockquote.text-center ¿Que dicen nuestros clientes?
-  .row.testimoniales
-    each testimonio in testimonios
-      .col-md-6.col-lg-4.mb-4
-        .card
-          .card-body
-            blockquote.blockquote
-            p.mb-0
-              | #{testimonio.mensaje}
-            footer.blockquote-footer
-              | #{testimonio.nombre}
+  
+  include ./layout/bloque_testimonios
+
   main.container.mt-5
     .row
       h2.d-block.w-100.text-center Agrega un testimonio.

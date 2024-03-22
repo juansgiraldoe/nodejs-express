@@ -28,7 +28,7 @@ h3 {
 .btn-success {
     background-color: #DC135F;
     border-color: #DC135F;
-    padding: .8rem 0;
+    padding: .4rem 0;
     text-transform: uppercase;
     border-radius: .5rem;
 }
@@ -144,6 +144,7 @@ footer .nav a,
 
 .proximos-viajes p {
     font-size: .9rem;
+    margin-bottom: 12px;
 }
 i {
     color: #DC135F;
